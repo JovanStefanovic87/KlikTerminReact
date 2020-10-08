@@ -1,0 +1,376 @@
+@import '../../scss/variables.scss';
+
+.Backdrop {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 300;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.InputText {
+	display: block;
+	width: 97% !important;
+	margin: 20px auto 5px auto;
+	font-size: 18px !important;
+}
+
+.InputTextMob {
+	display: block;
+	width: 97% !important;
+	margin: 20px auto 5px auto;
+	font-size: 1rem !important;
+}
+
+.Form {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 91;
+	table {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: flex-start;
+		width: 95%;
+		height: auto;
+		max-height: calc(100vh - 260px);
+		margin: 10px auto 20px auto;
+		overflow: auto;
+		font-size: 22px;
+		border: 2px solid black;
+		thead {
+			display: block;
+			position: sticky;
+			top: 0;
+			margin: 0;
+			background-color: $header-background-color;
+			tr {
+				color: $base-orange-color;
+				th {
+					width: 45vw;
+					min-width: 300px;
+				}
+			}
+		}
+		tbody {
+			display: block;
+			margin: 0;
+			.Clients {
+				cursor: pointer;
+				color: white;
+				&:nth-child(odd) {
+					background-color: $header-background-color;
+				}
+				&:nth-child(even) {
+					background-color: $form-even-row-color;
+				}
+				td {
+					width: 45vw;
+					min-width: 300px;
+					border: 2px solid black;
+				}
+				&:hover {
+					color: black;
+					background-color: $base-orange-color;
+				}
+			}
+			.ClientsMob {
+				padding: 5px 0 4px 0;
+				cursor: pointer;
+				border-top: 6px ridge gray;
+				color: white;
+				&:nth-child(odd) {
+					background-image: $form-row-bg1;
+				}
+				&:nth-child(even) {
+					background-image: $form-row-bg2;
+				}
+				td {
+					width: 100vw;
+					min-width: 300px;
+				}
+			}
+			.Services {
+				cursor: pointer;
+				color: white;
+				&:nth-child(odd) {
+					background-color: $header-background-color;
+				}
+				&:nth-child(even) {
+					background-color: $form-even-row-color;
+				}
+
+				td {
+					width: 45vw;
+					min-width: 300px;
+					border: 2px solid black;
+				}
+			}
+			.ServicesMob {
+				padding: 5px 0 4px 0;
+				cursor: pointer;
+				border-top: 6px ridge gray;
+				color: white;
+				&:nth-child(odd) {
+					background-image: $form-row-bg1;
+				}
+				&:nth-child(even) {
+					background-image: $form-row-bg2;
+				}
+				td {
+					width: 80vw;
+					vertical-align: middle;
+					word-break: break-all;
+				}
+			}
+		}
+	}
+	input[type='password'],
+	[type='text'] {
+		width: 40%;
+		max-width: 400px;
+		height: 33px;
+		font-size: 20px;
+		border-radius: 7px;
+		&:focus {
+			font-size: 21px;
+			border: 5px double black;
+		}
+	}
+	.MobileOperator {
+		width: 80px;
+		max-width: 80px;
+		transition: none;
+		border: 2px double rgba(128, 128, 128, 0.541);
+		&:hover {
+			background-image: url("data:image/svg+xml;utf8,<svg fill='orange' height='100%' viewBox='5 6 12 12' width='100%' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+		}
+	}
+	.PhoneNumber {
+		width: calc(42% - 80px);
+		max-width: 320px;
+		margin: 20px auto 5px auto;
+	}
+	.MobileOperatorMob {
+		display: inline-block;
+		width: 80px;
+		height: 31px;
+		transition: none;
+		margin: 20px auto 5px auto;
+		font-size: 1rem !important;
+		border: 2px double rgba(128, 128, 128, 0.541);
+		&:hover {
+			background-image: url("data:image/svg+xml;utf8,<svg fill='orange' height='100%' viewBox='5 6 12 12' width='100%' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+		}
+	}
+	.PhoneNumberMob {
+		display: inline-block;
+		width: calc(97% - 80px);
+		font-size: 1rem !important;
+	}
+}
+
+.FormTitle {
+	margin: 10px 0 10px 0;
+	font-size: 1.7rem;
+	color: $base-orange-color;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 40px;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		background-image: $orange-line-color;
+		-webkit-background-image: $orange-line-color;
+		-moz-background-image: $orange-line-color;
+		-o-background-image: $orange-line-color;
+		-ms-background-image: $orange-line-color;
+	}
+}
+
+.FormTitleMob {
+	margin: 2px 0 10px 0;
+	color: $base-orange-color;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 20px;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		background-image: $orange-line-color;
+		-webkit-background-image: $orange-line-color;
+		-moz-background-image: $orange-line-color;
+		-o-background-image: $orange-line-color;
+		-ms-background-image: $orange-line-color;
+	}
+}
+
+.Filter {
+	display: block;
+	position: relative;
+	width: 80%;
+	margin: 8px auto 0 auto;
+	padding: 6px;
+	font-size: 16px;
+}
+
+.SubmitButton {
+	@include button;
+	display: inline-block;
+	width: 30%;
+	max-width: 300px;
+	height: 35px;
+	margin: 40px auto 5px auto;
+}
+
+.SubmitButtonMob {
+	@include button;
+	display: inline-block;
+	width: 70%;
+	max-width: 300px;
+	height: 40px;
+	margin: 20px auto 5px auto;
+}
+
+.FormButtonCloseMob {
+	display: block;
+	width: 50%;
+	height: 40px;
+	margin: 20px auto 5px auto;
+	color: orangered !important;
+}
+
+.FormButton {
+	display: inline-block;
+	width: 30%;
+	max-width: 300px;
+	height: 35px;
+	margin: 20px auto 5px auto;
+}
+
+.FormButtonClose {
+	display: inline-block;
+	width: 30%;
+	max-width: 300px;
+	height: 35px;
+	margin: 20px auto 5px auto;
+	color: orangered !important;
+}
+
+.FormButtonMob {
+	display: block;
+	width: 70%;
+	height: 40px;
+	margin: 20px auto 5px auto;
+}
+
+.radioContainer {
+	display: inline-block;
+	position: absolute;
+	margin-top: 27.5vw;
+	border-radius: 50%;
+	border: none;
+	z-index: 300;
+}
+
+.radiolbl {
+	display: inline-block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.radiolbl input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	border: none;
+	top: 0;
+	left: 0;
+	height: 26px;
+	width: 26px;
+	background: radial-gradient(
+		circle,
+		rgba(9, 14, 39, 0.664) 23%,
+		rgba(99, 101, 129, 0.938) 36%,
+		rgba(99, 101, 129, 0.486) 40%
+	);
+	border-radius: 50%;
+	border: none;
+}
+
+/* On mouse-over, add a grey background color */
+.radiolbl:hover input ~ .checkmark {
+	transform: scale(1.2, 1.2);
+	background: radial-gradient(
+		circle,
+		rgba(15, 28, 93, 0.76) 23%,
+		rgba(89, 92, 128, 0.979) 36%,
+		rgba(92, 94, 126, 0.781) 40%
+	);
+}
+
+/* When the radio button is checked, add a blue background */
+.radiolbl input:checked ~ .checkmark {
+	background: radial-gradient(
+		$base-orange-color 60%,
+		$base-orange-color 36%,
+		rgba($base-orange-color, 0.8) 40%
+	);
+	transition: ease-out 1.5s;
+	box-shadow: 0 0 3px 3px $base-orange-color;
+	transform: rotateY(360deg) scale(1.1, 1.1);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiolbl input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiolbl .checkmark:after {
+	top: 8px;
+	left: 8px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgb(238, 255, 0);
+}
+
+.radio {
+	cursor: pointer;
+	margin: 0 10px 0 10px;
+	border-radius: 50%;
+	z-index: 9;
+	opacity: 1;
+}
+
+.DesciptionLabel {
+	margin: 20px 0 -15px 0;
+	font-weight: bold;
+	color: rgba(255, 0, 0, 0.788);
+}
